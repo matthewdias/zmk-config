@@ -17,14 +17,24 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
+// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
+// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
+//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp SQT  &kp CMMA &kp DOT &kp P &kp Y &kp F &kp G  &kp C &kp R &kp L
-   &kp A    &kp O    &kp E   &mt LSHFT U &kp I &kp D &mt LSHFT H &kp T &kp N &kp S
-   &mt LALT SEMI &kp Q    &kp J   &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z
-   &kp LGUI &lt 2 SPACE &kp ESC   &kp RET &lt 1 BSPC &kp RCTRL
+   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I    &kp O   &kp P
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K    &kp L   &kp SCLN
+   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp FSLH
+          &kp LGUI &mo 1 &kp LSFT   &kp SPC &mo 2 &kp RALT
                         >;
                 };
                 nav_layer {
+// -----------------------------------------------------------------------------------------
+// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
+// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
+// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
+//             |     |      |     |   |     |      |      |
                         bindings = <
    &bt BT_CLR   &trans  &kp ESC  &kp TILD &trans     &kp TAB  &kp HOME &kp UARW &kp END  &kp DEL
    &bt BT_SEL 0 &kp GUI &kp RALT &kp LCTL &mo 3      &kp FSLH &kp LARW &kp DARW &kp RARW &kp BKSP
@@ -34,6 +44,11 @@
                 };
 
                 sym_layer {
+// -----------------------------------------------------------------------------------------
+// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
+// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
+// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
+//             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp BANG  &kp ATSN  &kp HASH  &kp CURU  &kp PRCT    &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
    &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp PIPE
@@ -41,6 +56,5 @@
                        &kp LGUI  &trans    &kp SPC     &kp RET   &trans   &kp RALT
                         >;
                 };
-
-        };
-};
+              };
+          };
