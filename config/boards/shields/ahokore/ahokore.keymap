@@ -19,7 +19,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
         #binding-cells = <2>;
-        tapping_term_ms = <150>;
+        tapping_term_ms = <300>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
@@ -29,26 +29,25 @@
 
                 default_layer {
                         bindings = <
-   &kp SQT  &kp CMMA &kp DOT &kp P &kp Y &kp F &kp G  &kp C &kp R &kp L
-   &kp A    &kp O    &kp E   &hm LSHFT U &kp I &kp D &hm RSHFT H &kp T &kp N &kp S
-   &hm LALT SEMI &kp Q    &kp J   &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z
-   &kp LGUI &lt 2 SPACE &kp ESC   &kp RET &lt 1 BSPC &kp RCTRL
+                        &bt BT_CLR   &none  &none  &none &none     &none  &kp PG_UP &kp UP &kp PG_DN  &none
+                        &kp TAB &none &bt BT_SEL 2 &bt BT_SEL 1 &none      &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
+                        &none &none  &bt BT_PRV   &bt BT_NXT   &none     &none &none &none   &none    &none
+                                             &none   &none   &none     &none   &none   &none
                         >;
                 };
                 nav_layer {
                         bindings = <
-   &bt BT_CLR   &no  &no  &no &no     &no  &kp PG_UP &kp UP &kp PG_DN  &no
-   &kp TAB &no &bt BT_SEL 2 &bt BT_SEL 1 &no      &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
-   &no &no  &bt BT_PRV   &bt BT_NEXT   &no     &no &no &no   &no    &no
-                        &trans   &trans   &trans     &trans   &trans   &trans
-                        >;
+                        &kp SQT  &kp CMMA &kp DOT &kp P &kp Y &kp F &kp G  &kp C &kp R &kp L
+                        &kp A    &kp O    &kp E   &hm LSHFT U &kp I &kp D &hm RSHFT H &kp T &kp N &kp S
+                        &hm LALT SEMI &kp Q    &kp J   &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z
+                        &kp LGUI &lt 2 SPACE &kp ESC   &kp RET &lt 1 BSPC &kp RCTRL                        >;
                 };
 
                 sym_layer {
                         bindings = <
    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7 &kp N8 &kp N9 &kp N0
   &kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCNT      &kp CARET &kp AMPS &kp STAR &kp MINUS &kp SLASH
-   &kp LBKT  &kp RBKT  &kp BSLH  &kp EQUAL  &kp LSHFT      &kp RSHFT    &kp GRAVE   &kp UNDER &kp LPAR &kp KC_RPRN
+   &kp LBKT  &kp RBKT  &kp BSLH  &kp EQUAL  &kp LSHFT      &kp RSHFT    &kp GRAVE   &kp UNDER &kp LPAR &kp RPAR
                        &trans  &trans    &trans     &trans   &trans   &trans
                         >;
                 };
