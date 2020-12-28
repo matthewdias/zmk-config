@@ -29,18 +29,19 @@
 
                 default_layer {
                         bindings = <
-                        &bt BT_CLR   &none  &none  &none &none     &none  &kp PG_UP &kp UP &kp PG_DN  &none
-                        &kp TAB &none &bt BT_SEL 2 &bt BT_SEL 1 &none      &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
-                        &none &none  &bt BT_PRV   &bt BT_NXT   &none     &none &none &none   &none    &none
-                                             &none   &none   &none     &none   &none   &none
+   &kp SQT  &kp CMMA &kp DOT &kp P &kp Y &kp F &kp G  &kp C &kp R &kp L
+   &kp A    &kp O    &kp E   &hm LSHFT U &kp I &kp D &hm RSHFT H &kp T &kp N &kp S
+   &hm LALT SEMI &kp Q    &kp J   &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z
+   &kp LGUI &lt 2 SPACE &kp ESC   &kp RET &lt 1 BSPC &kp RCTRL
                         >;
                 };
                 nav_layer {
                         bindings = <
-                        &kp SQT  &kp CMMA &kp DOT &kp P &kp Y &kp F &kp G  &kp C &kp R &kp L
-                        &kp A    &kp O    &kp E   &hm LSHFT U &kp I &kp D &hm RSHFT H &kp T &kp N &kp S
-                        &hm LALT SEMI &kp Q    &kp J   &kp K &kp X &kp B &kp M  &kp W &kp V &kp Z
-                        &kp LGUI &lt 2 SPACE &kp ESC   &kp RET &lt 1 BSPC &kp RCTRL                        >;
+   &bt BT_CLR   &none  &none  &none &none     &none  &kp PG_UP &kp UP &kp PG_DN  &none
+   &kp TAB &none &none &bt BT_SEL 0 &bt BT_SEL 1      &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
+   &none &none  &bt BT_PRV   &bt BT_NXT   &none     &none &none &none   &none    &none
+                        &trans   &trans   &trans     &trans   &trans   &trans
+                        >;
                 };
 
                 sym_layer {
