@@ -12,6 +12,10 @@
 #define nav_layer   1
 #define sym_layer   2
 
+&mt {
+    tapping_term_ms = <200>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -28,8 +32,8 @@
                 nav_layer {
 
                         bindings = <
-   &bt BT_CLR   &trans  &kp ESC  &kp TILD &trans      &kp TAB   &kp HOME  &kp END &kp DEL   &kp DEL
-   &bt BT_SEL 0 &trans  &kp RALT &trans   &trans      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &kp BKSP
+   &bt BT_CLR   &trans  &kp ESC  &kp TILDE &trans     &kp TAB   &kp HOME  &kp END &kp DEL   &kp DEL
+   &bt BT_SEL 0 &trans  &kp RALT &trans   &trans      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &kp BSPC
    &bt BT_SEL 1 &trans  &trans   &trans   &trans      &trans    &trans    &trans   &trans    &trans
                         &trans   &trans   &trans      &trans   &trans   &trans
                         >;
