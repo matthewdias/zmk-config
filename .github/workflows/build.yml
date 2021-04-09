@@ -62,20 +62,3 @@ jobs:
         with:
           name: firmware
           path: ahokore_nice_nano.uf2
-      - name: West Build (RoMac)
-        uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
-        id: west-build-romac
-        with:
-          args: 'build "-s zmk/app -b nice_nano -- -DSHIELD=romac -DZMK_CONFIG=/github/workspace/config"'
-      - name: RoMac DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: RoMac Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 romac_nice_nano.uf2
-      - name: Archive (RoMac)
-        uses: actions/upload-artifact@v2
-        with:
-          name: firmware
-          path: romac_nice_nano.uf2
