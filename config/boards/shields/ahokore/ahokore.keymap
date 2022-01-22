@@ -52,7 +52,7 @@
                         bindings = <
    &kp BANG  &kp ATSN  &kp HASH  &kp CURU  &kp PRCT    &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN
    &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp PIPE
-   &trans    &trans    &trans    &trans    &trans      &trans    &trans   &trans   &trans   &kp BSLH
+   &kp RET   &trans    &trans    &trans    &trans      &trans    &trans   &trans   &trans   &kp BSLH
                        &trans    &trans    &kp SPC     &kp RET   &trans   &kp RALT
                         >;
                 };
